@@ -1,0 +1,50 @@
+#rage {
+	background-image: url("../img/joker.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.container {
+		justify-content: flex-end;
+
+		& div {
+			box-sizing: border-box;
+			padding: 3em 2em;
+			background: black;
+			height: 100vh;
+			width: 50%;
+		}
+
+		h1 {
+			font-size: 5em;
+			text-align: right;
+			position: relative;
+			top: 30%;
+			width: 50%;
+			right: 2%;
+			z-index: 0;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 20%;
+				right: -20%;
+				height: 20px;
+				width: 40%;
+				background: #ff0077;
+				z-index: -1;
+			}
+
+			&::after {
+				content: "JOKER";
+				font-size: 5em;
+				position: absolute;
+				left: -43%;
+				top: -14%;
+				letter-spacing: 4;
+				z-index: -1;
+				white-space: nowrap;
+				color: rgba(187, 187, 187, 0.185);
+			}
+		}
+	}
+}

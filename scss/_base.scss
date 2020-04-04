@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@font-face {
+	font-family: "VENOM";
+	src: url("../fonts/VENOM.ttf");
+}
+
+// BASE
+::-webkit-scrollbar {
+	opacity: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Montserrat";
+	font-weight: 400;
+	overflow-x: hidden;
+	background: #000000;
+}
+
+a {
+	text-decoration: none;
+	color: #f2f2f2;
+	transition: all 0.3s ease;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	display: flex;
+	color: #f2f2f2;
+	height: 100vh;
+}
+
+.wrapper {
+	padding: 1em;
+}

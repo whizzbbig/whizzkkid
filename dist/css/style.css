@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@font-face {
+  font-family: "VENOM";
+  src: url("../fonts/VENOM.ttf"); }
+::-webkit-scrollbar {
+  opacity: 0;
+  width: 0;
+  visibility: hidden; }
+
+body,
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  overflow-x: hidden;
+  background: #000000; }
+
+a {
+  text-decoration: none;
+  color: #f2f2f2;
+  transition: all 0.3s ease; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+
+.container {
+  display: flex;
+  color: #f2f2f2;
+  height: 100vh; }
+
+.wrapper {
+  padding: 1em; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: #242524;
+  background: radial-gradient(circle, rgba(36, 37, 36, 0) 0%, rgba(0, 0, 0, 0.731530112) 100%); }
+  header a.logo {
+    font-weight: 700; }
+    header a.logo:hover {
+      color: #e74c3c; }
+  header nav ul {
+    display: flex;
+    margin-top: 0.5em;
+    margin-right: 1em; }
+    header nav ul li {
+      margin-right: 1em; }
+      header nav ul li a:hover {
+        color: #ff0077; }
+
+#rage {
+  background-image: url("../img/joker.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #rage .container {
+    justify-content: flex-end; }
+    #rage .container div {
+      box-sizing: border-box;
+      padding: 3em 2em;
+      background: black;
+      height: 100vh;
+      width: 50%; }
+    #rage .container h1 {
+      font-size: 5em;
+      text-align: right;
+      position: relative;
+      top: 30%;
+      width: 50%;
+      right: 2%;
+      z-index: 0; }
+      #rage .container h1::before {
+        content: "";
+        position: absolute;
+        top: 20%;
+        right: -20%;
+        height: 20px;
+        width: 40%;
+        background: #ff0077;
+        z-index: -1; }
+      #rage .container h1::after {
+        content: "JOKER";
+        font-size: 5em;
+        position: absolute;
+        left: -43%;
+        top: -14%;
+        letter-spacing: 4;
+        z-index: -1;
+        white-space: nowrap;
+        color: rgba(187, 187, 187, 0.185); }
+
+#venom {
+  width: 100%;
+  height: 100vh; }
+  #venom .wrapper {
+    padding: 0; }
+  #venom #container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/venom-tom-hardy.jpg");
+    background-attachment: fixed;
+    background-size: cover; }
+    #venom #container .box {
+      position: absolute;
+      background: url("../img/venom-tom-hardy.jpg");
+      background-attachment: fixed;
+      background-size: cover; }
+  #venom h1 {
+    font-size: 5em;
+    color: #f2f2f2;
+    font-weight: 700;
+    z-index: 0;
+    padding: 1em;
+    position: relative;
+    top: 30%;
+    width: 45%; }
+    #venom h1::before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      z-index: -1;
+      top: 67%;
+      left: 0%;
+      height: 20px;
+      background: #ff0077; }
+    #venom h1::after {
+      content: "VENOM";
+      font-family: "VENOM";
+      color: rgba(0, 0, 0, 0.575);
+      position: absolute;
+      font-size: 7em;
+      letter-spacing: 5rem;
+      white-space: nowrap;
+      left: 15%;
+      top: -15%;
+      z-index: -1; }

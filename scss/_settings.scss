@@ -1,0 +1,35 @@
+header {
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	background: rgb(36, 37, 36);
+	background: radial-gradient(
+		circle,
+		rgba(36, 37, 36, 0) 0%,
+		rgba(0, 0, 0, 0.7315301120448179) 100%
+	);
+
+	a.logo {
+		font-weight: 700;
+
+		&:hover {
+			color: #e74c3c;
+		}
+	}
+
+	nav ul {
+		display: flex;
+		margin-top: 0.5em;
+		margin-right: 1em;
+
+		& li {
+			margin-right: 1em;
+
+			& a:hover {
+				color: #ff0077;
+			}
+		}
+	}
+}

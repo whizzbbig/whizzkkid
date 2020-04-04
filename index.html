@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whizzkkid</title>
+
+    <link rel="stylesheet" href="./dist/css/style.css">
+</head>
+
+<body>
+    <header class="wrapper">
+        <a href="#" class="logo">whizzkkid</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="rage">
+        <div class="wrapper">
+            <div class="container">
+                <h1>Smile, because it confuses people.</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="venom">
+        <div id="container">
+            <div class="wrapper"></div>
+            <h1>We Can Do Whatever We Want.</h1>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        let bg = document.getElementById('container');
+        let count = 20;
+        for (let i = 0; i < count; i++) {
+            let glitchBox = document.createElement('div')
+            glitchBox.className = "box";
+            bg.appendChild(glitchBox);
+        }
+        setInterval(function () {
+            let glitch = document.getElementsByClassName('box');
+            for (let i = 0; i < glitch.length; i++) {
+                glitch[i].style.left = Math.floor(Math.random() * 100) + 'vw';
+                glitch[i].style.top = Math.floor(Math.random() * 100) + 'vh';
+                glitch[i].style.width = Math.floor(Math.random() * 400) + 'px';
+                glitch[i].style.height = Math.floor(Math.random() * 100) + 'px';
+                glitch[i].style.backgroundPosition = Math.floor(Math.random() * 50) + 'px';
+            }
+        }, 200)
+    </script>
+</body>
+
+</html>
