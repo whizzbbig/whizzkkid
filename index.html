@@ -4,56 +4,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
     <title>whizzkkid</title>
 
+    <!-- Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/style.css">
+    <script src="https://kit.fontawesome.com/4876c39f81.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <header class="wrapper">
-        <a href="#" class="logo">whizzkkid</a>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="rage">
-        <div class="wrapper">
-            <div class="container">
-                <h1>Smile, because it confuses people.</h1>
+    <main class="wrapper">
+        <header class="parallax__group hero-container">
+            <div class="parallax__layer background"></div>
+            <div class="parallax__layer hills"></div>
+            <div class="parallax__layer ground"></div>
+            <div class="parallax__layer hero-text">
+                <h2>whizzkkid</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="venom">
-        <div id="container">
-            <div class="wrapper"></div>
-            <h1>We Can Do Whatever We Want.</h1>
-        </div>
-    </section>
+        <section class="intro-section parallax__group padders">
+            <div class="container">
+                <div class="stars">
+                    <ul>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                    </ul>
 
+                    <ul>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                    </ul>
+
+                    <ul>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                        <li><i class="far fa-star fa-2x"></i></li>
+                    </ul>
+                </div>
+                <img src="./dist/img/me.png" style="width: 500px; height: 750px; z-index: 0;" alt="My Photo">
+                <div class="dot-container">
+                    <div class="dot-field"></div>
+                </div>
+
+            </div>
+            <div class="second-container">
+                <div class="first-heading">
+                    <h1>I am <br> Frontend - Developer</h1>
+                </div>
+                <div class="second-heading">
+                    <h1>I AM <br> UI/UX DESIGNER</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="about parallax__group padders">
+            <div class="containers">
+                <h1 class="text-align">KNOW MORE <span>ABOUT ME.</span></h1>
+                <a href="about.html" class="btn">ABOUT ME</a>
+            </div>
+        </section>
+
+        <footer id="main-footer">
+            <p>Copyright &copy; <span id="year"></span>, <a href="https://whizzkkid.github.io"
+                    class="footer__link">whizzkkid</a></p>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script type="text/javascript">
-        let bg = document.getElementById('container');
-        let count = 20;
-        for (let i = 0; i < count; i++) {
-            let glitchBox = document.createElement('div')
-            glitchBox.className = "box";
-            bg.appendChild(glitchBox);
-        }
-        setInterval(function () {
-            let glitch = document.getElementsByClassName('box');
-            for (let i = 0; i < glitch.length; i++) {
-                glitch[i].style.left = Math.floor(Math.random() * 100) + 'vw';
-                glitch[i].style.top = Math.floor(Math.random() * 100) + 'vh';
-                glitch[i].style.width = Math.floor(Math.random() * 400) + 'px';
-                glitch[i].style.height = Math.floor(Math.random() * 100) + 'px';
-                glitch[i].style.backgroundPosition = Math.floor(Math.random() * 50) + 'px';
-            }
-        }, 200)
+        $(function () {
+            AOS.init({
+                offset: 400,
+                easing: 'ease-out-back',
+                duration: 1000
+            });
+        });
+        //Get the current year for the copyright
+        $("#year").text(new Date().getFullYear());
     </script>
 </body>
 
